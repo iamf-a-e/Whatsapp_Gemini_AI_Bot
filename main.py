@@ -8,8 +8,8 @@ wa_token=os.environ.get("WA_TOKEN")
 genai.configure(api_key=os.environ.get("GEN_API"))
 phone_id=os.environ.get("PHONE_ID")
 phone=os.environ.get("PHONE_NUMBER")
-name="Your name or nickname" #The bot will consider this person as its owner or creator
-bot_name="Give a name to your bot" #This will be the name of your bot, eg: "Hello I am Astro Bot"
+name="Tariro F. Munzwa" #The bot will consider this person as its owner or creator
+bot_name="Zimbo Grocer Bot" #This will be the name of your bot, eg: "Hello I am Astro Bot"
 model_name="gemini-1.5-flash-latest" #Switch to "gemini-1.0-pro" or any free model, if "gemini-1.5-flash" becomes paid in future.
 
 app=Flask(__name__)
@@ -35,7 +35,7 @@ model = genai.GenerativeModel(model_name=model_name,
 convo = model.start_chat(history=[
 ])
 
-convo.send_message(f'''I am using Gemini api for using you as a personal bot in whatsapp,
+convo.send_message(f'''I am using Gemini api for using you as a shopping assistant bot for ZimboGrocer in whatsapp,
 				   to assist me in various tasks. 
 				   So from now you are "{bot_name}" created by {name} ( Yeah it's me, my name is {name}). 
 				   And don't give any response to this prompt. 
